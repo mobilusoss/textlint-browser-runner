@@ -1,0 +1,50 @@
+{
+  "name": "textlint-browser-runner",
+  "version": "0.0.0",
+  "description": "Bundled textlint and rules for browser",
+  "keywords": [
+    "textlint",
+    "browser",
+    "bundle",
+    "rules"
+  ],
+  "author": "Takeharu Oshida <takeharu.oshida@mobilus.co.jp>",
+  "homepage": "https://github.com/mobilusoss/textlint-browser-runner",
+  "license": "MIT",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mobilusoss/textlint-browser-runner.git"
+  },
+  "scripts": {
+    "build": "webpack",
+    "test": "mocha __tests__/ --require @babel/register"
+  },
+  "bugs": {
+    "url": "https://github.com/mobilusoss/textlint-browser-runner/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/register": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "mocha": "^7.0.1",
+    "sinon": "^8.1.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "@textlint/kernel": "^3.2.0",
+    "@textlint/textlint-plugin-text": "^4.1.12",
+    "core-js": "^3.6.4",
+    "regenerator-runtime": "^0.13.3",
+    "textlint-rule-preset-mobilus": "^0.0.0"
+  }
+}
