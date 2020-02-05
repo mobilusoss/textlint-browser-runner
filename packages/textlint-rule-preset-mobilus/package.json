@@ -26,7 +26,8 @@
   },
   "scripts": {
     "test": "mocha __tests__/",
-    "example": "(cd example && npm install && npm test)"
+    "example": "(cd example && npm install && npm test)",
+    "precommit": "lint-staged"
   },
   "bugs": {
     "url": "https://github.com/mobilusoss/textlint-browser-runner/issues"
