@@ -13,7 +13,9 @@
     }
   },
   "scripts": {
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
+    "create": "lerna create"
   },
   "lint-staged": {
     "*.{js,css,md}": "prettier --write"
