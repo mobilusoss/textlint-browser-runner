@@ -15,7 +15,8 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
-    "create": "lerna create"
+    "create": "lerna create",
+    "test": "lerna run test"
   },
   "lint-staged": {
     "*.{js,css,md}": "prettier --write"
