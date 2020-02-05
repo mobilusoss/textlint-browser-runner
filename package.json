@@ -3,11 +3,19 @@
   "private": true,
   "devDependencies": {
     "husky": "^4.2.1",
-    "lerna": "^3.20.2"
+    "lerna": "^3.20.2",
+    "lint-staged": "^10.0.7",
+    "prettier": "1.19.1"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lerna run --concurrency 1 --stream precommit"
     }
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
   }
 }

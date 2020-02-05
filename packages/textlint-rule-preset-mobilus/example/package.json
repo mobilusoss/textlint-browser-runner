@@ -1,0 +1,13 @@
+{
+  "name": "example",
+  "private": true,
+  "scripts": {
+    "test": "textlint README.md"
+  },
+  "author": "Takeharu.Oshida",
+  "license": "MIT",
+  "dependencies": {
+    "textlint": "^11.0.0",
+    "textlint-rule-preset-mobilus": "file:.."
+  }
+}

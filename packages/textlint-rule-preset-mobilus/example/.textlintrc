@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "preset-mobilus": {
+      "ng-word": {
+        words: ["りんご",”みかん”]
+      },
+    }
+  }
+}
