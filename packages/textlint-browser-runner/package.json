@@ -25,7 +25,8 @@
   },
   "scripts": {
     "build": "webpack",
-    "test": "mocha __tests__/ --require @babel/register"
+    "test": "mocha __tests__/ --require @babel/register",
+    "example": "npx http-server ./ -o /example/"
   },
   "bugs": {
     "url": "https://github.com/mobilusoss/textlint-browser-runner/issues"
