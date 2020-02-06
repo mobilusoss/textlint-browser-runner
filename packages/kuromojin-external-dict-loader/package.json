@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "kuromojin-external-dict-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Enable kuromoji to load dict files from external url",
   "keywords": [
     "kuromoji",
@@ -41,6 +41,5 @@
     "karma-spec-reporter": "0.0.32",
     "mocha": "^7.0.1",
     "sinon": "^8.1.1"
-  },
-  "dependencies": {}
+  }
 }
