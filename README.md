@@ -1,6 +1,6 @@
 # textlint-browser-runner
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
-[![Node.js CI](https://github.com/mobilusoss/textlint-browser-runner/workflows/Node.js%20CI/badge.svg)](https://github.com/mobilusoss/textlint-browser-runner/actions?query=workflow%3)
+[![Node.js CI](https://github.com/mobilusoss/textlint-browser-runner/workflows/Node.js%20CI/badge.svg)](https://github.com/mobilusoss/textlint-browser-runner/actions?query=workflow%3A%22Node.js+CI%22)
 [![Build Status](https://travis-ci.com/mobilusoss/textlint-browser-runner.svg?branch=master)](https://travis-ci.com/mobilusoss/textlint-browser-runner)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmobilusoss%2Ftextlint-browser-runner.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmobilusoss%2Ftextlint-browser-runner?ref=badge_shield)
 [![codebeat badge](https://codebeat.co/badges/7d36c660-3695-47cd-b0a8-d8490200f6f9)](https://codebeat.co/projects/github-com-mobilusoss-textlint-browser-runner-master)
