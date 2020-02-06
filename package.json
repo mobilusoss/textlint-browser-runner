@@ -17,9 +17,12 @@
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
     "create": "lerna create",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "build": "lerna run build",
+    "copy": "cp packages/textlint-browser-runner/dist/textlint.bundle.min.js ./docs/downloads/ && cp packages/kuromojin-external-dict-loader/kuromojin-external-dict-loader.js ./docs/downloads/ && cp README.md ./docs/index.md",
+    "prepublish": "npm run clean && npm run bootstrap && npm run build && npm run copy"
   },
   "lint-staged": {
-    "*.{js,css,md}": "prettier --write"
+    "packages/**/*.{js,css,md}": "prettier --write"
   }
 }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/lodash@4.16.6"></script>
+  <script type="text/javascript">
+  window.kuromojin = {
+    dicPath: "https://cdn.jsdelivr.net/npm/kuromoji@0.1.2/dict"
+  };
+  </script>
+  <script src="./downloads/kuromojin-external-dict-loader.js"></script>
+  <script src="./downloads/textlint.bundle.min.js"></script>
+
+  <title>textlint-browser-runner</title>
+</head>
+<body>
+  <h3>textlint-browser-runner</h3>
+  <div>
+    <p><strong>例文</strong><p>
+    <ul>
+      <li id="ex1">句読点、が、とても、多い、行、だよ</li>
+      <li id="ex2">今日は早朝から出発したが、定刻には間に合わなかったが、無事会場に到着した。</li>
+      <li id="ex3">かな漢字変換により漢字が多用される傾向がある。しかし漢字の多用が読みにくさをもたらす側面は否定できない。</li>
+      <li id="ex4">確かにそういった懸念はない事はない。</li>
+      <li id="ex5">お刺身を食べれない。</li>
+    </ul>
+  </div>
+  <div>
+    <textarea name="" id="input" cols="140" rows="10" placeholder="メッセージを入力してください"></textarea>
+    <div>
+      <p><strong>lint結果</strong><p>
+      <ul id="output"></ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var linter = new Textlint();
+    var doLint = _.throttle(function(){
+      $("#output").empty();
+      $("#output").append($('<li>lint中...</li>'));
+      var text = $("#input").val();
+      linter.lintText(text)
+      .then(function(result){
+        $("#output").empty();
+        var lines = text.split('\n');
+        result.messages.forEach(function(m){
+          console.log(m);
+          var li = document.createElement('li');
+          $(li).text(m.line + "行目" + m.column + "文字目 [" + m.ruleId + "]: <" + m.message + ">「" + lines[m.line -1] + "」")
+          $("#output").append(li);
+        })
+      })
+      .catch(function(e){
+        $("#output").empty();
+        var li = document.createElement('li');
+        $(li).text('lintエラー ' + JSON.stringify(e))
+        $("#output").append(li);
+      });
+    }, 1000, {leading: true, trailing: true});
+
+    $("textarea").on("keyup", function(){
+      doLint();
+    })
+  </script>
+</body>
+</html>
