@@ -24,7 +24,8 @@
     "url": "git://github.com/mobilusoss/textlint-browser-runner.git"
   },
   "scripts": {
-    "build": "webpack",
+    "build": "BABEL_ENV=production NODE_ENV=production webpack --env.production",
+    "build:dev": "webpack --mode=development --config webpack.development.config.js",
     "test": "mocha __tests__/ --require @babel/register",
     "example": "npx http-server ./ -o /example/"
   },
@@ -38,7 +39,9 @@
     "babel-loader": "^8.0.6",
     "mocha": "^7.0.1",
     "sinon": "^8.1.1",
+    "terser-webpack-plugin": "^2.3.4",
     "webpack": "^4.41.5",
+    "webpack-bundle-analyzer": "^3.6.0",
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {

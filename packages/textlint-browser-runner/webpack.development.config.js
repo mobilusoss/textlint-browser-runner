@@ -1,12 +1,12 @@
-const TerserPlugin = require('terser-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: {
     'textlint': './index.js',
   },
   output: {
-    filename: '[name].bundle.min.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
@@ -31,18 +31,7 @@ module.exports = {
       }
     ]
   },
-  optimization: {
-    minimize: true,
-      minimizer: [new TerserPlugin({
-        parallel: true,
-        terserOptions: {
-          ecma: 6,
-          compress: true,
-          output: {
-            comments: false,
-            beautify: false
-          }
-        }
-      })]
-  },
+  plugins: [
+    new BundleAnalyzerPlugin()
+  ]
 };
