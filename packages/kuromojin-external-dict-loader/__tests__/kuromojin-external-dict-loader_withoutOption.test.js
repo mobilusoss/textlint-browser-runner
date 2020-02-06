@@ -1,16 +1,14 @@
-const sinon = require('sinon');
-const assert = require('assert');
-window.kuromojin = {
-  dicPath: '/dict'
-}
-require('../kuromojin-external-dict-loader.js');
 
-const doXhr = (url) => {
-  const xhr = new XMLHttpRequest();
-  xhr.open('GET', url, false);
-}
+// load kuromojin-option2.js in karma
+// window.kuromojin = {
+//   dicPath: '/dict'
+// }
 
 describe('kuromojin-external-dict-loader without external dicPath option', () => {
+  const doXhr = (url) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url, false);
+  }
   let xhr;
   beforeEach(() => {
     sinon.stub(XMLHttpRequest.prototype, 'patched_open')
