@@ -1,0 +1,36 @@
+{
+  "private": true,
+  "name": "kuromojin-external-dict-loader",
+  "version": "0.0.1",
+  "description": "Enable kuromoji to load dict files from external url",
+  "keywords": [
+    "kuromoji",
+    "kuromojin",
+    "cdn"
+  ],
+  "author": "Takeharu Oshida <takeharu.oshida@mobilus.co.jp>",
+  "homepage": "https://github.com/mobilusoss/textlint-browser-runner/issues/3",
+  "license": "MIT",
+  "main": "kuromojin-external-dict-loader.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mobilusoss/textlint-browser-runner.git"
+  },
+  "scripts": {
+    "test": "mocha-puppeteer __tests__/*.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/mobilusoss/textlint-browser-runner/issues"
+  },
+  "devDependencies": {
+    "mocha-puppeteer": "^0.14.0",
+    "sinon": "^8.1.1"
+  }
+}
