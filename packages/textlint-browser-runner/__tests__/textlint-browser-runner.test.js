@@ -6,7 +6,7 @@ import {
   } from '@textlint/kernel'
 import preset from 'textlint-rule-preset-mobilus';
 
-const Linter = require('..');
+import Linter from '../';
 
 describe('textlint-browser-runner', () => {
     it('will export constructor', () => {
