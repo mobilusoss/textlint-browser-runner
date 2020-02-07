@@ -24,6 +24,6 @@
     "release": "npm run doc && lerna publish"
   },
   "lint-staged": {
-    "packages/**/*.{js,css,md}": "prettier --write"
+    "*.{js,css,md}": "prettier --write"
   }
 }
