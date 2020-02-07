@@ -17,13 +17,15 @@
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "lib",
+    "dist"
   ],
   "repository": {
     "type": "git",
     "url": "git://github.com/mobilusoss/textlint-browser-runner.git"
   },
   "scripts": {
+    "prebuild": "npx rimraf dist",
     "build": "BABEL_ENV=production NODE_ENV=production webpack --env.production",
     "build:dev": "webpack --mode=development --config webpack.development.config.js",
     "test": "mocha __tests__/ --require @babel/register",

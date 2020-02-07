@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   mode: 'production',
   entry: {
-    'textlint': './index.js',
+    'textlint': './browser.js',
   },
   output: {
     filename: '[name].bundle.min.js',
