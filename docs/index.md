@@ -28,7 +28,6 @@ window.kuromojin = {
   dicPath: "https://some_external_cdn_url/dict"
 };
 </script>
-<script src="/path/to/kuromojin-external-dict-loader.js"></script>
 <script src="/path/to/textlint.bundle.min.js"></script>
 <script>
   var linter = new Textlint(options);
