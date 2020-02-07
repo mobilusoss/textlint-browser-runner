@@ -1,6 +1,6 @@
 {
   "name": "textlint-browser-runner",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Bundled textlint and rules for browser",
   "keywords": [
     "textlint",
@@ -51,6 +51,6 @@
     "@textlint/textlint-plugin-text": "^4.1.12",
     "core-js": "^3.6.4",
     "regenerator-runtime": "^0.13.3",
-    "textlint-rule-preset-mobilus": "^0.0.2"
+    "textlint-rule-preset-mobilus": "^0.0.3"
   }
 }
