@@ -21,7 +21,7 @@
     "build": "lerna run build",
     "copy": "cp packages/textlint-browser-runner/dist/textlint.bundle.min.js ./docs/downloads/ && cp packages/kuromojin-external-dict-loader/kuromojin-external-dict-loader.js ./docs/downloads/ && cp README.md ./docs/index.md",
     "doc": "npm run clean && npm run bootstrap && npm run build && npm run copy",
-    "release": "npm run doc && lerna publish"
+    "release": "npm run doc && lerna publish --conventional-commits --changelog-preset=angular-all --dist-tag latest"
   },
   "lint-staged": {
     "*.{js,css,md}": "prettier --write"
