@@ -37,7 +37,7 @@ window.kuromojin = {
   dicPath: "https://cdn.jsdelivr.net/npm/kuromoji@0.1.2/dict"
 };
 </script>
-<script src="https://cdn.jsdelivr.net/npm/textlint-browser-runner/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/textlint-browser-runner@latest/dist/textlint.bundle.min.js"></script>
 <script>
   var linter = new Textlint(options);
   linter.lintText('お刺身が食べれない').then(console.log).catch(console.log)
