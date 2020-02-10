@@ -2,11 +2,11 @@
 
 [textlint rule preset](https://github.com/textlint/textlint/blob/master/docs/rule-preset.md "preset") for Mobilus.
 
-Mobilus向けのtextlint ruleのpresetです。
+Mobilus 向けの textlint rule の preset です。
 
 [textlint-ja/textlint-rule-preset-ja](https://github.com/textlint-ja/textlint-rule-preset-ja)に加えていくつかのルールを追加しています。
 
-Webブラウザ上で日本語入力に対してtextlintを動作させることを主な目的としています。
+Web ブラウザ上で日本語入力に対して textlint を動作させることを主な目的としています。
 
 そのため、`fs` にアクセスするようなルールは含まれていません。
 
@@ -16,9 +16,10 @@ Webブラウザ上で日本語入力に対してtextlintを動作させること
 npm install textlint-rule-preset-mobilus
 ```
 
-このpresetは以下のルールを含んでいます。ルールの詳細は各リンク先を確認してください
+この preset は以下のルールを含んでいます。ルールの詳細は各リンク先を確認してください
 
 - [textlint-rule-date-weekday-mismatch](https://www.npmjs.com/package/textlint-rule-date-weekday-mismatch)
+- [textlint-rule-ja-hiragana-hojodoushi](https://www.npmjs.com/package/textlint-rule-ja-hiragana-hojodoushi)
 - [textlint-rule-ja-hiragana-keishikimeishi](https://www.npmjs.com/package/textlint-rule-ja-hiragana-keishikimeishi)
 - [textlint-rule-ja-no-mixed-period](https://www.npmjs.com/package/textlint-rule-ja-no-mixed-period)
 - [textlint-rule-ja-no-redundant-expression](https://www.npmjs.com/package/textlint-rule-ja-no-redundant-expression)
@@ -53,9 +54,9 @@ Via `.textlintrc`
 
 ```json5
 {
-    "rules": {
-        "preset-mobilus": true
-    }
+  rules: {
+    "preset-mobilus": true
+  }
 }
 ```
 
@@ -65,7 +66,6 @@ Via CLI
 textlint --preset mobilus README.md
 ```
 
-
 Options
 
 [textlint-ja/textlint-rule-preset-ja](https://github.com/textlint-ja/textlint-rule-preset-ja) および 各ルールのデフォルト値に準拠します。
@@ -74,45 +74,46 @@ Options
 
 ```json5
 {
-    "rules": {
-        // それぞれのルールのデフォルト値
-        "preset-mobilus": {
-            "max-ten": {
-                "max": 3
-            },
-            "no-doubled-conjunctive-particle-ga": true,
-            "no-doubled-conjunction": true,
-            "no-double-negative-ja": true,
-            "no-doubled-joshi": {
-                "min_interval": 1
-            },
-            "sentence-length": {
-                "max": 100
-            },
-            "no-dropping-the-ra": true,
-            "no-mix-dearu-desumasu": true,
-            "no-nfd": true,
-            "no-invalid-control-character": true,
-            "date-weekday-mismatch": true,
-            "ja-hiragana-keishikimeishi": true,
-            "ja-no-abusage": true,
-            "ja-no-mixed-period": true,
-            "ja-no-redundant-expression": true,
-            "ja-no-weak-phrase": true,
-            "ja-unnatural-alphabet": true,
-            "max-comma": true,
-            "max-kanji-continuous-len": true,
-            "max-number-of-lines": true,
-            "ng-word": true,
-            "no-exclamation-question-mark": true,
-            "no-hankaku-kana": true,
-            "no-insert-dropping-sa": true,
-            "no-mixed-zenkaku-and-hankaku-alphabet": true,
-            "no-start-duplicated-conjunction": true,
-            "no-unmatched-pair": true,
-            "prefer-tari-tari": true,
-        }
+  rules: {
+    // それぞれのルールのデフォルト値
+    "preset-mobilus": {
+      "max-ten": {
+        max: 3
+      },
+      "no-doubled-conjunctive-particle-ga": true,
+      "no-doubled-conjunction": true,
+      "no-double-negative-ja": true,
+      "no-doubled-joshi": {
+        min_interval: 1
+      },
+      "sentence-length": {
+        max: 100
+      },
+      "no-dropping-the-ra": true,
+      "no-mix-dearu-desumasu": true,
+      "no-nfd": true,
+      "no-invalid-control-character": true,
+      "date-weekday-mismatch": true,
+      "ja-hiragana-hojodoushi": true,
+      "ja-hiragana-keishikimeishi": true,
+      "ja-no-abusage": true,
+      "ja-no-mixed-period": true,
+      "ja-no-redundant-expression": true,
+      "ja-no-weak-phrase": true,
+      "ja-unnatural-alphabet": true,
+      "max-comma": true,
+      "max-kanji-continuous-len": true,
+      "max-number-of-lines": true,
+      "ng-word": true,
+      "no-exclamation-question-mark": true,
+      "no-hankaku-kana": true,
+      "no-insert-dropping-sa": true,
+      "no-mixed-zenkaku-and-hankaku-alphabet": true,
+      "no-start-duplicated-conjunction": true,
+      "no-unmatched-pair": true,
+      "prefer-tari-tari": true
     }
+  }
 }
 ```
 

@@ -1,14 +1,8 @@
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const path = require('path');
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: {
     'textlint': './browser.js',
-  },
-  output: {
-    filename: '[name].bundle.min.js',
-    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
@@ -26,25 +20,18 @@ module.exports = {
                   ie: '11',
                 },
               }]
+            ],
+            plugins: [
+              ['babel-plugin-static-fs', {
+                target: 'browser',
+                dynamic: false,
+                onFile: onFile,
+              }]
             ]
           }
         }
       }
     ]
-  },
-  optimization: {
-    minimize: true,
-      minimizer: [new TerserPlugin({
-        parallel: true,
-        terserOptions: {
-          ecma: 5,
-          compress: true,
-          output: {
-            comments: false,
-            beautify: false
-          }
-        }
-      })]
   },
   plugins: [
     new MomentLocalesPlugin({
@@ -52,3 +39,6 @@ module.exports = {
     }),
   ]
 };
+function onFile (file) {
+  console.log('Discovered new dependency:', file);
+}

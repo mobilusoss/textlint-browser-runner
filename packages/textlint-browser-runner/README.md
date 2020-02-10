@@ -38,6 +38,7 @@ Default:
   "no-nfd": true,
   "no-invalid-control-character": true,
   "date-weekday-mismatch": true,
+  "ja-hiragana-hojodoushi": true,
   "ja-hiragana-keishikimeishi": true,
   "ja-no-abusage": true,
   "ja-no-mixed-period": true,

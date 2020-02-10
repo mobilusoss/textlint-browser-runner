@@ -26,7 +26,7 @@
   },
   "scripts": {
     "prebuild": "npx rimraf dist",
-    "build": "BABEL_ENV=production NODE_ENV=production webpack --env.production",
+    "build": "BABEL_ENV=production NODE_ENV=production webpack --env.production --config webpack.production.config.js",
     "build:dev": "webpack --mode=development --config webpack.development.config.js",
     "test": "mocha __tests__/ --require @babel/register",
     "example": "npx http-server ./ -o /example/"
@@ -39,6 +39,7 @@
     "@babel/preset-env": "7.8.4",
     "@babel/register": "7.8.3",
     "babel-loader": "8.0.6",
+    "babel-plugin-static-fs": "^3.0.0",
     "mocha": "7.0.1",
     "moment-locales-webpack-plugin": "1.1.2",
     "sinon": "8.1.1",
@@ -52,6 +53,7 @@
     "@textlint/textlint-plugin-text": "^4.1.12",
     "core-js": "^3.6.4",
     "regenerator-runtime": "^0.13.3",
-    "textlint-rule-preset-mobilus": "^0.0.3"
+    "textlint-rule-preset-mobilus": "^0.0.3",
+    "webpack-merge": "^4.2.2"
   }
 }

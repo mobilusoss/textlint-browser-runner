@@ -6,9 +6,13 @@ const rules = assign({}, preset.rules, {
   "date-weekday-mismatch": moduleInterop(
     require("textlint-rule-date-weekday-mismatch")
   ),
+  "ja-hiragana-hojodoushi": moduleInterop(
+    require("textlint-rule-ja-hiragana-hojodoushi")
+  ),
   "ja-hiragana-keishikimeishi": moduleInterop(
     require("textlint-rule-ja-hiragana-keishikimeishi")
   ),
+
   "ja-no-mixed-period": moduleInterop(
     require("textlint-rule-ja-no-mixed-period")
   ),
@@ -51,6 +55,7 @@ const rules = assign({}, preset.rules, {
 
 const rulesConfig = assign({}, preset.rulesConfig, {
   "date-weekday-mismatch": true,
+  "ja-hiragana-hojodoushi": true,
   "ja-hiragana-keishikimeishi": true,
   "ja-no-mixed-period": true,
   "ja-no-redundant-expression": true,
