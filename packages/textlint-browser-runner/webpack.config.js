@@ -26,6 +26,13 @@ module.exports = {
                   ie: '11',
                 },
               }]
+            ],
+            plugins: [
+              ['babel-plugin-static-fs', {
+                target: 'browser',
+                dynamic: false,
+                onFile: onFile,
+              }]
             ]
           }
         }
@@ -52,3 +59,6 @@ module.exports = {
     }),
   ]
 };
+function onFile (file) {
+  console.log('Discovered new dependency:', file);
+}

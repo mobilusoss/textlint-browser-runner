@@ -1,10 +1,11 @@
+const staticFs = require('babel-plugin-static-fs');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 const path = require('path');
 module.exports = {
   mode: 'development',
   entry: {
-    'textlint': './index.js',
+    'textlint': './browser.js',
   },
   output: {
     filename: '[name].bundle.js',
@@ -26,6 +27,13 @@ module.exports = {
                   ie: '11',
                 },
               }]
+            ],
+            plugins: [
+              ['babel-plugin-static-fs', {
+                target: 'browser',
+                dynamic: false,
+                onFile: onFile,
+              }]
             ]
           }
         }
@@ -39,3 +47,6 @@ module.exports = {
     new BundleAnalyzerPlugin()
   ]
 };
+function onFile (file) {
+  console.log('Discovered new dependency:', file);
+}
