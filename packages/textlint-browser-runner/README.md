@@ -40,7 +40,6 @@ Default:
   "date-weekday-mismatch": true,
   "ja-hiragana-hojodoushi": true,
   "ja-hiragana-keishikimeishi": true,
-  "ja-no-abusage": true,
   "ja-no-mixed-period": true,
   "ja-no-redundant-expression": true,
   "ja-no-weak-phrase": true,
