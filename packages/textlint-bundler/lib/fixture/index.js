@@ -1,3 +1,4 @@
+require('file-loader?name=[name].[ext]!./example.html');
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import {

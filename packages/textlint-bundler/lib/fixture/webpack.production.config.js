@@ -6,7 +6,7 @@ module.exports = merge(common, {
   mode: 'production',
   output: {
     filename: '[name].bundle.min.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(process.cwd(), 'dist'),
   },
   optimization: {
     minimize: true,

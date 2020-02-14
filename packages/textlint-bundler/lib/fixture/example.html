@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/lodash@4.16.6"></script>
+  <script src="./textlint.bundle.min.js"></script>
+  <title>textlint-browser-bundler</title>
+</head>
+<body>
+  <h3></h3>
+  <div>
+    <textarea name="" id="input" cols="140" rows="10" placeholder="Please input message"></textarea>
+    <div>
+      <p><strong>Lint Result</strong><p>
+      <ul id="output"></ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+    window.kuromojin = {
+      // dicPath: "./dict/"
+      dicPath: "https://cdn.jsdelivr.net/npm/kuromoji@0.1.2/dict"
+    };
+    var linter = new Textlint();
+    var doLint = _.throttle(function(){
+      $("#output").empty();
+      $("#output").append($('<li>linting...</li>'));
+      var text = $("#input").val();
+      linter.lintText(text)
+      .then(function(result){
+        $("#output").empty();
+        var lines = text.split('\n');
+        result.messages.forEach(function(m){
+          var li = document.createElement('li');
+          $(li).text("Line: " +m.line + ", Col: " + m.column + ", RuleId: " + m.ruleId + ", Message: " + m.message + ", Body: " + lines[m.line -1])
+          $("#output").append(li);
+        })
+      })
+      .catch(function(e){
+        $("#output").empty();
+        var li = document.createElement('li');
+        $(li).text('Error ' + JSON.stringify(e))
+        $("#output").append(li);
+      });
+    }, 1000, {leading: true, trailing: true});
+
+    $("textarea").on("keyup", function(){
+      doLint();
+    })
+  </script>
+</body>
+</html>
