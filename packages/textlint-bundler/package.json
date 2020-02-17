@@ -1,0 +1,61 @@
+{
+  "name": "textlint-bundler",
+  "version": "0.0.1",
+  "description": "Bundle textlint and preset for browser",
+  "keywords": [
+    "textlint",
+    "rules",
+    "preset",
+    "browser",
+    "bundler"
+  ],
+  "author": "Takeharu Oshida <takeharu.oshida@mobilus.co.jp>",
+  "homepage": "https://github.com/mobilusoss/textlint-browser-runner",
+  "license": "MIT",
+  "main": "lib/textlint-bundler.js",
+  "bin": {
+    "textlint-bundler": "./bin/cmd.js"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mobilusoss/textlint-browser-runner.git"
+  },
+  "scripts": {
+    "test": "mocha __tests__/"
+  },
+  "bugs": {
+    "url": "https://github.com/mobilusoss/textlint-browser-runner/issues"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@textlint/kernel": "^3.2.1",
+    "@textlint/textlint-plugin-text": "^4.1.13",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-static-fs": "^3.0.0",
+    "chalk": "^3.0.0",
+    "core-js": "^3.6.4",
+    "file-loader": "^5.0.2",
+    "meow": "^6.0.0",
+    "ora": "^4.0.3",
+    "regenerator-runtime": "^0.13.3",
+    "terser-webpack-plugin": "^2.3.4",
+    "webpack": "^4.41.6",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "textlint": {
+    "preset": "japanese"
+  },
+  "devDependencies": {
+    "mocha": "^7.0.1",
+    "textlint-rule-preset-japanese": "^4.0.4"
+  }
+}
