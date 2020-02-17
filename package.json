@@ -2,8 +2,8 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-    "@monorepo-utils/collect-changelog": "^2.1.1",
-    "conventional-changelog-angular-all": "^1.7.0",
+    "@monorepo-utils/collect-changelog": "2.1.1",
+    "conventional-changelog-angular-all": "1.7.0",
     "husky": "4.2.3",
     "lerna": "3.20.2",
     "lint-staged": "10.0.7",
