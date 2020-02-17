@@ -14,6 +14,8 @@
 
 - [textlint-rule-preset-mobilus](https://www.npmjs.com/package/textlint-rule-preset-mobilus)
 
+- [textlint-bundler](https://www.npmjs.com/package/textlint-bundler)
+
 - [kuromojin-external-dict-loader](https://github.com/mobilusoss/textlint-browser-runner/tree/master/packages/kuromojin-external-dict-loader)
 
 
@@ -30,7 +32,6 @@
 
 ## Usage
 
-
 ```
 <script>
 window.kuromojin = {
@@ -43,6 +44,8 @@ window.kuromojin = {
   linter.lintText('お刺身が食べれない').then(console.log).catch(console.log)
 </script>
 ```
+
+Or create your own bundle with [textlint-bundler](https://github.com/mobilusoss/textlint-browser-runner/tree/master/packages/textlint-bundler)
 
 ## Demo
 
