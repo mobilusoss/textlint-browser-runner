@@ -14,7 +14,7 @@
   "license": "MIT",
   "main": "lib/textlint-bundler.js",
   "bin": {
-    "textlint-preset-bundler": "./bin/cmd.js"
+    "textlint-bundler": "./bin/cmd.js"
   },
   "directories": {
     "lib": "lib",

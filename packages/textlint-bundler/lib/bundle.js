@@ -9,8 +9,7 @@ const readPkg = () => {
   return JSON.parse(pkgStr)
 }
 
-const createWebpackConfig = (debugMode = false) => {
-  const preset = textlint.preset;
+const createWebpackConfig = (preset, debugMode = false) => {
   let webpackConfig
   if (debugMode) {
     webpackConfig = require('./fixture/webpack.development.config');
@@ -34,7 +33,7 @@ module.exports = (flags, spinner) => {
   if (!textlint.preset) {
     return Promise.reject('`textlint.preset` is not defined in package.json');
   }
-  const webpackConfig = createWebpackConfig(flags.debug);
+  const webpackConfig = createWebpackConfig(textlint.preset, flags.debug);
   return new Promise((resolve, reject) => {
     const webpackCallback = (err, stats) => {
       spinner.clear();
