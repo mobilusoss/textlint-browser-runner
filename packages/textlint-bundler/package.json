@@ -1,6 +1,6 @@
 {
   "name": "textlint-bundler",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Bundle textlint and preset for browser",
   "keywords": [
     "textlint",
