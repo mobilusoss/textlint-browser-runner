@@ -14,6 +14,8 @@
 
 - [textlint-rule-preset-mobilus](https://www.npmjs.com/package/textlint-rule-preset-mobilus)
 
+- [textlint-bundler](https://www.npmjs.com/package/textlint-bundler)
+
 - [kuromojin-external-dict-loader](https://github.com/mobilusoss/textlint-browser-runner/tree/master/packages/kuromojin-external-dict-loader)
 
 
@@ -30,19 +32,20 @@
 
 ## Usage
 
-
 ```
 <script>
 window.kuromojin = {
   dicPath: "https://cdn.jsdelivr.net/npm/kuromoji@0.1.2/dict"
 };
 </script>
-<script src="https://cdn.jsdelivr.net/npm/textlint-browser-runner/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/textlint-browser-runner@latest/dist/textlint.bundle.min.js"></script>
 <script>
   var linter = new Textlint(options);
   linter.lintText('お刺身が食べれない').then(console.log).catch(console.log)
 </script>
 ```
+
+Or create your own bundle with [textlint-bundler](https://github.com/mobilusoss/textlint-browser-runner/tree/master/packages/textlint-bundler)
 
 ## Demo
 
