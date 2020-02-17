@@ -2,20 +2,14 @@ const fs = require('fs');
 const path = require('path');
 const chalk = require('chalk');
 const webpack = require('webpack');
+
 const readPkg = () => {
   const pkgFile = path.resolve(process.cwd(), 'package.json')
   const pkgStr = fs.readFileSync(pkgFile, 'utf-8')
   return JSON.parse(pkgStr)
 }
 
-module.exports = (flags, spinner) => {
-  const textlint = readPkg().textlint;
-  if (!textlint) {
-    return Promise.reject('`textlint` is not defined in package.json');
-  }
-  if (!textlint.preset) {
-    return Promise.reject('`textlint.preset` is not defined in package.json');
-  }
+const createWebpackConfig = (debugMode = false) => {
   const preset = textlint.preset;
   const debugMode = flags.debug;
   let webpackConfig
@@ -30,33 +24,40 @@ module.exports = (flags, spinner) => {
       `textlint-rule-preset-${preset}`
     )
   );
+  return webpackConfig;
+}
+
+module.exports = (flags, spinner) => {
+  const textlint = readPkg().textlint;
+  if (!textlint) {
+    return Promise.reject('`textlint` is not defined in package.json');
+  }
+  if (!textlint.preset) {
+    return Promise.reject('`textlint.preset` is not defined in package.json');
+  }
+  const webpackConfig = createWebpackConfig(debugMode);
   return new Promise((resolve, reject) => {
-    webpack(webpackConfig, (err, stats) => { // Stats Object
+    const webpackCallback = (err, stats) => {
+      spinner.clear();
       if (err) {
-        spinner.clear();
         console.error(chalk.bold.red('Error'), err.stack || err);
-        if (err.details) {
-          console.log(err.details)
-        }
+        console.log(err.details || '');
         return reject('Bundle Error')
       }
 
       const info = stats.toJson();
-
       if (stats.hasErrors()) {
-        spinner.clear();
         console.error(chalk.bold.red('Error'), 'webpack errors');
         console.log(info.errors.join(""))
         return reject('Bundle stats has errors')
       }
 
       if (stats.hasWarnings()) {
-        spinner.clear();
         console.warn(chalk.keyword('orange')('Warning'), 'webpack warnings');
         console.log(chalk.keyword('gray')(info.warnings.join("")))
-        resolve()
       }
       resolve()
-    });
+    };
+    webpack(webpackConfig, webpackCallback);
   });
 }
