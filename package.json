@@ -28,7 +28,7 @@
     "versionup:minor": "lerna version minor --conventional-commits --changelog-preset=angular-all",
     "versionup:major": "lerna version major --conventional-commits --changelog-preset=angular-all",
     "versionup:cancel": "git tag --points-at HEAD | xargs -I{} git tag --delete {} && git reset --hard HEAD^",
-    "release": "lerna publish --conventional-commits --changelog-preset=angular --dist-tag latest",
+    "release": "lerna publish from-package --dist-tag latest",
     "collect-changelog": "git tag --points-at HEAD | xargs -I{} monorepo-utils-collect-changelog {} | pbcopy"
   },
   "lint-staged": {
