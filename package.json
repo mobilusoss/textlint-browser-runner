@@ -2,6 +2,8 @@
   "name": "root",
   "private": true,
   "devDependencies": {
+    "@monorepo-utils/collect-changelog": "^2.1.1",
+    "conventional-changelog-angular-all": "^1.7.0",
     "husky": "4.2.3",
     "lerna": "3.20.2",
     "lint-staged": "10.0.7",
@@ -26,7 +28,8 @@
     "versionup:minor": "lerna version minor --conventional-commits --changelog-preset=angular-all",
     "versionup:major": "lerna version major --conventional-commits --changelog-preset=angular-all",
     "versionup:cancel": "git tag --points-at HEAD | xargs -I{} git tag --delete {} && git reset --hard HEAD^",
-    "release": "lerna publish --conventional-commits --changelog-preset=angular --dist-tag latest"
+    "release": "lerna publish --conventional-commits --changelog-preset=angular --dist-tag latest",
+    "collect-changelog": "git tag --points-at HEAD | xargs -I{} monorepo-utils-collect-changelog {} | pbcopy"
   },
   "lint-staged": {
     "*.{js,css,md}": "prettier --write"
