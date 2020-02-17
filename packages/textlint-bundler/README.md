@@ -4,14 +4,25 @@ Bundle [textlint](https://github.com/textlint/textlint "textlint") and some [pre
 
 ## Usage
 
-1. Chose or [Create](https://textlint.github.io/docs/rule-preset.html) preset.
-2. `$ npm init`
-3. `$ npm install textlint-rule-preset-xxxx`
+1. `$ npm init`
+
+2. Chose or [Create](https://textlint.github.io/docs/rule-preset.html) preset.
+
+    `$ npm install textlint-rule-preset-xxxx`
+
 4. Update `package.json` with `textlint.preset` directive
     ```
-      "textlint": {
-        "preset" : "xxxx"
-      }
+    "textlint": {
+      "preset" : "xxxx"
+    }
     ```
-5. `$ npx textlint-bundler`
-6. `$ npx http-server ./dist -o /example.html`
+
+5. Install `textlint-bundler` and run. (Can not run via `npx` See #36)
+
+    ```
+    $ npm install textlint-bundler --save-dev
+    $ node_modules/.bin/textlint-bundler
+    ```
+6. Try it on browser
+
+    `$ npx http-server ./dist -o /example.html`
