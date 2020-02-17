@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const chalk = require('chalk');
 const webpack = require('webpack');
 
 const readPkg = () => {
@@ -35,27 +34,15 @@ module.exports = (flags, spinner) => {
   }
   const webpackConfig = createWebpackConfig(textlint.preset, flags.debug);
   return new Promise((resolve, reject) => {
-    const webpackCallback = (err, stats) => {
+    webpack(webpackConfig, (err, stats) => {
       spinner.clear();
       if (err) {
-        console.error(chalk.bold.red('Error'), err.stack || err);
-        console.log(err.details || '');
-        return reject('Bundle Error')
+        return reject(err);
       }
-
-      const info = stats.toJson();
       if (stats.hasErrors()) {
-        console.error(chalk.bold.red('Error'), 'webpack errors');
-        console.log(info.errors.join(""))
-        return reject('Bundle stats has errors')
+        return reject(stats);
       }
-
-      if (stats.hasWarnings()) {
-        console.warn(chalk.keyword('orange')('Warning'), 'webpack warnings');
-        console.log(chalk.keyword('gray')(info.warnings.join("")))
-      }
-      resolve()
-    };
-    webpack(webpackConfig, webpackCallback);
+      return resolve(stats);
+    });
   });
 }

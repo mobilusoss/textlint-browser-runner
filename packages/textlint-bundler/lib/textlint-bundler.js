@@ -37,12 +37,24 @@ const run = () => {
   console.log(chalk.bold.white('Start Bundling...'))
   const spinner = ora().start();
   bundle(cli.flags, spinner)
-  .then(() => {
+  .then((stats) => {
+    if (stats.hasWarnings()) {
+      const info = stats.toJson();
+      console.warn(chalk.keyword('orange')('Warning'), 'webpack warnings');
+      console.log(chalk.keyword('gray')(info.warnings.join("")));
+    }
     console.log(chalk.bold.green('Success'));
     console.log("Run `npx http-server ./dist -o /example.html` to see example");
   })
-  .catch((e) => {
-    console.log(chalk.bold.red('Error'), e);
+  .catch((reason) => {
+    if (typeof reason.hasErrors === 'function' ) {
+      console.error(chalk.bold.red('Error'), 'webpack errors');
+      const info = reason.toJson();
+      console.log(info.errors.join(""));
+    } else {
+      console.error(chalk.bold.red('Error'), reason.stack || reason);
+      console.log(reason.details || '');
+    }
   })
   .finally(() => {
     spinner.stop();
