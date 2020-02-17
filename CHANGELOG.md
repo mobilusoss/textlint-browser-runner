@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/mobilusoss/textlint-browser-runner/compare/v0.1.0...v0.2.0) (2020-02-17)
+
+
+### Chores
+
+* reveret independent mode ([c5a86f4](https://github.com/mobilusoss/textlint-browser-runner/commit/c5a86f4))
+* update npm scripts ([d3cfc03](https://github.com/mobilusoss/textlint-browser-runner/commit/d3cfc03))
+* Update readme ([07a62b3](https://github.com/mobilusoss/textlint-browser-runner/commit/07a62b3))
+* **deps:** pin dependencies ([14b5cd4](https://github.com/mobilusoss/textlint-browser-runner/commit/14b5cd4))
+* **deps:** update dependency husky to v4.2.2 ([4626cf9](https://github.com/mobilusoss/textlint-browser-runner/commit/4626cf9))
+* **deps:** update dependency husky to v4.2.3 ([7dd8c18](https://github.com/mobilusoss/textlint-browser-runner/commit/7dd8c18))
+* **deps:** update dependency terser-webpack-plugin to v2.3.5 ([f2e8683](https://github.com/mobilusoss/textlint-browser-runner/commit/f2e8683))
+* **deps:** update dependency webpack to v4.41.6 ([6d8a5e5](https://github.com/mobilusoss/textlint-browser-runner/commit/6d8a5e5))
+* **deps:** update dependency webpack-cli to v3.3.11 ([76bdb31](https://github.com/mobilusoss/textlint-browser-runner/commit/76bdb31))
+
+
+### Features
+
+* **textlint-bundler:** Add textlint-bundler ([e7fd62a](https://github.com/mobilusoss/textlint-browser-runner/commit/e7fd62a))
+
+
+### Styles
+
+* **textlint-bundler:** fix coding style ([26eba92](https://github.com/mobilusoss/textlint-browser-runner/commit/26eba92))
+* **textlint-bundler:** fix coding style ([40dac44](https://github.com/mobilusoss/textlint-browser-runner/commit/40dac44))
+* **textlint-bundler:** fix coding style ([7a8306d](https://github.com/mobilusoss/textlint-browser-runner/commit/7a8306d))
+
+
+
+
+
 # [0.1.0](https://github.com/mobilusoss/textlint-browser-runner/compare/v0.0.3...v0.1.0) (2020-02-10)
 
 
