@@ -40,7 +40,7 @@
     "@textlint/textlint-plugin-text": "^4.1.13",
     "babel-loader": "^8.0.6",
     "babel-plugin-static-fs": "^3.0.0",
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "core-js": "^3.6.4",
     "file-loader": "^6.0.0",
     "meow": "^6.0.0",
