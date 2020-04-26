@@ -33,7 +33,7 @@
     "url": "https://github.com/mobilusoss/textlint-browser-runner/issues"
   },
   "devDependencies": {
-    "mocha": "7.1.1"
+    "mocha": "7.1.2"
   },
   "dependencies": {
     "@textlint-ja/textlint-rule-no-insert-dropping-sa": "^1.0.1",
