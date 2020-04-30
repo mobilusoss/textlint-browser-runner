@@ -35,8 +35,8 @@
     "url": "https://github.com/mobilusoss/textlint-browser-runner/issues"
   },
   "devDependencies": {
-    "@babel/core": "7.9.0",
-    "@babel/preset-env": "7.9.5",
+    "@babel/core": "7.9.6",
+    "@babel/preset-env": "7.9.6",
     "@babel/register": "7.9.0",
     "babel-loader": "8.1.0",
     "babel-plugin-static-fs": "3.0.0",
