@@ -2,7 +2,7 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-    "@monorepo-utils/collect-changelog": "2.1.1",
+    "@monorepo-utils/collect-changelog": "2.2.0",
     "conventional-changelog-angular-all": "1.7.0",
     "husky": "4.2.5",
     "lerna": "3.20.2",
