@@ -41,7 +41,7 @@
     "babel-loader": "8.1.0",
     "babel-plugin-static-fs": "3.0.0",
     "mocha": "7.1.2",
-    "moment": "2.24.0",
+    "moment": "2.25.0",
     "moment-locales-webpack-plugin": "1.2.0",
     "sinon": "9.0.2",
     "terser-webpack-plugin": "2.3.6",
