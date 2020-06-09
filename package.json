@@ -5,7 +5,7 @@
     "@monorepo-utils/collect-changelog": "2.2.0",
     "conventional-changelog-angular-all": "1.7.0",
     "husky": "4.2.5",
-    "lerna": "3.22.0",
+    "lerna": "3.22.1",
     "lint-staged": "10.2.9",
     "prettier": "2.0.5"
   },
