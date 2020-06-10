@@ -56,6 +56,6 @@
     "textlint-rule-no-mixed-zenkaku-and-hankaku-alphabet": "^1.0.1",
     "textlint-rule-no-start-duplicated-conjunction": "^2.0.2",
     "textlint-rule-prefer-tari-tari": "^1.0.3",
-    "textlint-rule-preset-japanese": "^4.0.4"
+    "textlint-rule-preset-japanese": "^5.0.0"
   }
 }
