@@ -55,6 +55,6 @@
     "core-js": "^3.6.4",
     "regenerator-runtime": "^0.13.3",
     "textlint-rule-preset-mobilus": "^0.2.0",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^5.0.0"
   }
 }
