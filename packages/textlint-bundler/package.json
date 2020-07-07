@@ -49,7 +49,7 @@
     "terser-webpack-plugin": "^3.0.0",
     "webpack": "^4.41.6",
     "webpack-bundle-analyzer": "^3.6.0",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^5.0.0"
   },
   "textlint": {
     "preset": "japanese"
