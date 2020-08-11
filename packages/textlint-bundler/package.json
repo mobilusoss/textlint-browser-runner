@@ -44,7 +44,7 @@
     "core-js": "^3.6.4",
     "file-loader": "^6.0.0",
     "meow": "^7.0.0",
-    "ora": "^4.0.3",
+    "ora": "^5.0.0",
     "regenerator-runtime": "^0.13.3",
     "terser-webpack-plugin": "^4.0.0",
     "webpack": "^4.41.6",
