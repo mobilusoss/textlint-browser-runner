@@ -43,7 +43,7 @@
     "mocha": "8.1.1",
     "moment": "2.27.0",
     "moment-locales-webpack-plugin": "1.2.0",
-    "sinon": "9.0.2",
+    "sinon": "9.0.3",
     "terser-webpack-plugin": "4.1.0",
     "webpack": "4.44.1",
     "webpack-bundle-analyzer": "3.8.0",
