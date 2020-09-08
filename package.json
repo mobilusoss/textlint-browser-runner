@@ -4,7 +4,7 @@
   "devDependencies": {
     "@monorepo-utils/collect-changelog": "2.3.0",
     "conventional-changelog-angular-all": "1.7.0",
-    "husky": "4.2.5",
+    "husky": "4.3.0",
     "lerna": "3.22.1",
     "lint-staged": "10.3.0",
     "prettier": "2.1.1"
