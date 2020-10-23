@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - "node"
+before_script:
+  - npm run bootstrap
 # https://developers.google.com/web/updates/2017/06/headless-karma-mocha-chai
 dist: trusty # needs Ubuntu Trusty
 # Note: if you switch to sudo: false, you'll need to launch Chrome with --no-sandbox.
