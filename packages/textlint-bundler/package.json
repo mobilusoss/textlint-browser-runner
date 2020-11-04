@@ -55,7 +55,7 @@
     "preset": "japanese"
   },
   "devDependencies": {
-    "mocha": "8.2.0",
+    "mocha": "8.2.1",
     "textlint-rule-preset-japanese": "5.0.0"
   }
 }
