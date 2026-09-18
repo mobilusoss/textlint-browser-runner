@@ -36,8 +36,8 @@
   },
   "devDependencies": {
     "@babel/core": "7.12.10",
-    "@babel/preset-env": "7.12.11",
-    "@babel/register": "7.12.10",
+    "@babel/preset-env": "7.29.7",
+    "@babel/register": "7.29.7",
     "babel-loader": "8.2.2",
     "babel-plugin-static-fs": "3.0.0",
     "mocha": "8.2.1",
